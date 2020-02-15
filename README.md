@@ -56,4 +56,40 @@ DISK_MODEL: "cat /sys/class/block/sd*/device/model  | sed 's/LOGICAL VOLUME/NA/'
 MAKE: "dmidecode | grep -A3 '^System Information' | grep -i Manufacturer | awk '{ print $NF }'"
 MODEL: "dmidecode -s system-product-name"
 SERIAL_NUMBER: "dmidecode -s system-serial-number"
+$
+```
+
+### Sample Output
+
+```console
+$ python get_hardware_details.py -f servers -c cmds.yaml
+Target Servers : ['server1', 'server2']
+=================================================================================
+server1:
+TOTAL_RAM_SLOTS : 25
+FLASH_SLOTS : 1
+DIMM SIZES :  4096 MB, 4096 MB, 4096 MB, 4096 MB, 16 MB
+TYPE : DDR3
+CURRENT_DISKS_POPULATED : 1
+DISK_SIZES : 1.8T
+DISK_TYPE : sda     -----> HD
+DISK_MODEL : ST2000NM0011    
+MAKE : Supermicro
+MODEL : X9DRW-3LN4F+/X9DRW-3TF+
+SERIAL_NUMBER : 0123456789
+=================================================================================
+server2:
+TOTAL_RAM_SLOTS : 12
+FLASH_SLOTS : 0
+DIMM SIZES :  8192 MB, 8192 MB, 8192 MB, 8192 MB, 8192 MB, 8192 MB
+TYPE : DDR3
+CURRENT_DISKS_POPULATED : 4
+DISK_SIZES : 465.7G,465.7G,465.7G,465.7G
+DISK_TYPE : sda     -----> HD,sdb     -----> HD,sdc     -----> HD,sdd     -----> HD
+DISK_MODEL : NA  ,NA  ,NA  ,NA  
+MAKE : HP
+MODEL : ProLiant DL180 G6  
+SERIAL_NUMBER : SGH21228R8
+=================================================================================
+$
 ```
