@@ -23,7 +23,7 @@ Usage:
 
 Options:
   --version             show program's version number and exit
-  -h, --help            show this help message and exit
+  -h, --help            show this help message and exit 
   -f SERVER_FILE, --file=SERVER_FILE
                         file which contains server names/ips
   -c CMDS_FILE, --cmds_file=CMDS_FILE
