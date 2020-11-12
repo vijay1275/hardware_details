@@ -13,7 +13,7 @@ def run_cmd(server, cmds, user="root"):
 
     Args:
         server (str): server on which command should execute
-        cmds (list): list of commands to execute
+        cmds (list): list  of commands to execute
 
     Returns:
         tuple: tuple consisting of the command return code (list),
