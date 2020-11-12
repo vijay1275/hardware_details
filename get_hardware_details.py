@@ -48,6 +48,7 @@ def get_hw_details(servers, data):
                      and value as command
             eg: {'USER': "whoami", 'Arhitecture': "arch"}
     """
+    remove_var = "test"
     hw_info = {}
     cmd_list = [cmd for cmd in data.values()]
 
