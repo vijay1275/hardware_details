@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '*.py'
+  pull:
+    paths:
+      - '*.py'
 
 jobs:
   flake8_py3:
