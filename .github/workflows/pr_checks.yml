@@ -28,6 +28,3 @@ jobs:
 
       - name: Running Tox
         run: tox
-
-      - name: Running flake8
-        run: flake8
