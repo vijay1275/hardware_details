@@ -6,9 +6,8 @@ jobs:
   pr_checks:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 5
       matrix:
-        python-version: [ 3.6, 3.7 ]
+        python-version: [ 3.6 ]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -26,6 +25,9 @@ jobs:
 
       - name: Running Tox
         run: tox
+
+      - name: checking directory
+        run: pwd
 
       - name: Running flake8
         run: flake8
